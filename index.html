@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>willegus – gitarrcovers</title>
+  <meta name="description" content="willegus spelar gitarr och gör covers på TikTok.">
+  <meta name="theme-color" content="#07090f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-1" aria-hidden="true"></div>
+  <div class="glow glow-2" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#top" class="logo">willegus<span>.</span></a>
+    <nav>
+      <a href="#videos" data-i18n="navVideos">Setlist</a>
+      <a href="#about" data-i18n="navAbout">Om mig</a>
+      <a href="#gear" data-i18n="navGear">Gear</a>
+      <a href="#contact" data-i18n="navContact">Kontakt</a>
+    </nav>
+    <div class="actions">
+      <button id="sound-toggle" class="chip" aria-pressed="true" title="Ljud på/av">🔊</button>
+      <button id="lang-toggle" class="chip" aria-label="Byt språk / Switch language">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero + länk-i-bio -->
+    <section class="hero">
+      <p class="eyebrow"><span class="dot"></span><span data-i18n="eyebrow">Gitarrcovers på TikTok</span></p>
+      <h1 class="name">willegus</h1>
+      <p class="tagline" data-i18n="tagline">Spelar gitarr och skapar covers! :)</p>
+      <div class="links">
+        <a class="btn primary" href="https://www.tiktok.com/@williamgu00" target="_blank" rel="noopener">
+          <span>TikTok</span><span class="handle">@williamgu00</span><span class="arrow">↗</span>
+        </a>
+        <a class="btn" href="https://www.youtube.com/@willegus" target="_blank" rel="noopener"><span>YouTube</span><span class="arrow">↗</span></a>
+        <a class="btn" href="https://www.instagram.com/williamgu0" target="_blank" rel="noopener"><span>Instagram</span><span class="arrow">↗</span></a>
+        <a class="btn" href="mailto:placeholder@gmail.com"><span data-i18n="emailBtn">Mejla mig</span><span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- Interaktiva strängar -->
+    <div class="strings-wrap">
+      <canvas id="strings" aria-label="Interaktiva gitarrsträngar"></canvas>
+      <p class="hint" id="strum-hint" data-i18n="strumHint">Dra musen över strängarna</p>
+    </div>
+  </main>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>COVERS</span><span>✦</span><span>FENDER STRATOCASTER</span><span>✦</span><span>GUITAR RIG 8</span><span>✦</span><span>@WILLIAMGU00</span><span>✦</span>
+      <span>COVERS</span><span>✦</span><span>FENDER STRATOCASTER</span><span>✦</span><span>GUITAR RIG 8</span><span>✦</span><span>@WILLIAMGU00</span><span>✦</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <section id="videos" class="reveal">
+      <div class="section-head"><span class="num">01</span><h2 data-i18n="featuredTitle">Setlist</h2></div>
+      <p class="lead" data-i18n="featuredText">Några av mina favoritcovers.</p>
+      <div id="video-grid" class="video-grid"></div>
+
+      <h3 data-i18n="latestTitle">Senaste på TikTok</h3>
+      <div class="creator">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@williamgu00" data-unique-id="williamgu00" data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
+          <section><a target="_blank" href="https://www.tiktok.com/@williamgu00">@williamgu00</a></section>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <div class="section-head"><span class="num">02</span><h2 data-i18n="aboutTitle">Om mig</h2></div>
+      <div class="about">
+        <p class="big" data-i18n="aboutText">Hej! Jag är willegus. Jag spelar gitarr och gör covers på låtar jag gillar.</p>
+        <dl class="facts">
+          <div><dt data-i18n="factInstrument">Instrument</dt><dd>Fender Stratocaster</dd></div>
+          <div><dt data-i18n="factSound">Ljud</dt><dd>Guitar Rig 8</dd></div>
+          <div><dt data-i18n="factThing">Grej</dt><dd data-i18n="factThingValue">Covers</dd></div>
+          <div><dt data-i18n="factWhere">Hitta mig</dt><dd><a href="https://www.tiktok.com/@williamgu00" target="_blank" rel="noopener">@williamgu00</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="gear" class="reveal">
+      <div class="section-head"><span class="num">03</span><h2 data-i18n="gearTitle">Gear</h2></div>
+      <ul id="gear-list" class="gear-list"></ul>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="section-head"><span class="num">04</span><h2 data-i18n="contactTitle">Kontakt</h2></div>
+      <p class="cta-title" data-i18n="contactText">Har du en låtönskan eller vill samarbeta?</p>
+      <a class="mail" href="mailto:placeholder@gmail.com">placeholder@gmail.com <span class="arrow">↗</span></a>
+    </section>
+  </div>
+
+  <footer>
+    <p><span data-i18n="footer">Gjord med en Strat och lite för mycket gain</span> · © <span id="year"></span> willegus</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="strings.js"></script>
+</body>
+</html>
